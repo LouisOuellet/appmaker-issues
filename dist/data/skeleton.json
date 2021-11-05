@@ -2,47 +2,25 @@
     "issues": [
         {
             "id": 1,
-            "created": "2020-11-17 08:47:45",
-            "modified": "2020-11-17 08:48:01",
-            "owner": "1",
-            "updated_by": "1",
+            "created": "2021-10-27 09:33:02",
+            "modified": "2021-10-27 09:33:02",
+            "owner": null,
+            "updated_by": null,
             "name": "General Review",
-            "description": "",
-            "priority": 2,
+            "description": null,
+            "priority": 1,
             "isDefault": "true"
         },
         {
             "id": 2,
-            "created": "2020-11-17 08:47:45",
-            "modified": "2020-11-17 08:48:01",
-            "owner": "1",
-            "updated_by": "1",
-            "name": "Brokerage",
-            "description": "",
-            "priority": 2,
-            "isDefault": null
-        },
-        {
-            "id": 3,
-            "created": "2020-11-17 08:47:45",
-            "modified": "2020-11-17 08:48:01",
-            "owner": "1",
-            "updated_by": "1",
+            "created": "2021-10-27 09:33:02",
+            "modified": "2021-10-27 09:33:02",
+            "owner": null,
+            "updated_by": null,
             "name": "Consultation",
-            "description": "",
+            "description": null,
             "priority": 2,
-            "isDefault": null
-        },
-        {
-            "id": 4,
-            "created": "2020-11-17 08:47:45",
-            "modified": "2020-11-17 08:48:01",
-            "owner": "1",
-            "updated_by": "1",
-            "name": "Logistics",
-            "description": "",
-            "priority": 2,
-            "isDefault": null
+            "isDefault": ""
         }
     ]
 }
