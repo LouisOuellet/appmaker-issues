@@ -1,7 +1,7 @@
 {
     "repository": {
         "name": "appmaker-issues",
-        "branch": "dev",
+        "branch": "stable",
         "manifest": "\/dist\/data\/manifest.json",
         "host": {
             "git": "https:\/\/github.com\/LouisOuellet\/",
@@ -12,6 +12,6 @@
         "issues"
     ],
     "name": "issues",
-    "build": 66,
-    "version": "21.11-dev"
+    "build": 67,
+    "version": "21.11-stable"
 }
