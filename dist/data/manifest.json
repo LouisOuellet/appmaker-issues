@@ -8,10 +8,12 @@
             "raw": "https:\/\/raw.githubusercontent.com\/LouisOuellet\/"
         }
     },
-    "table": [
-        "issues"
-    ],
+    "requirements": {
+        "table": [
+            "issues"
+        ]
+    },
     "name": "issues",
-    "build": 74,
+    "build": 75,
     "version": "21.11-dev"
 }
