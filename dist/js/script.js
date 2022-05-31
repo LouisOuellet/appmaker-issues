@@ -1,23 +1,23 @@
-API.Plugins.issues = {
+Engine.Plugins.issues = {
 	element:{
 		table:{
 			index:{},
 		},
 	},
 	init:function(){
-		API.GUI.Sidebar.Nav.add('Issues', 'main_navigation');
+		Engine.GUI.Sidebar.Nav.add('Issues', 'main_navigation');
 	},
 	load:{
 		index:function(){
-			API.Builder.card($('#pagecontent'),{ title: 'Issues', icon: 'issues'}, function(card){
-				API.request('issues','read',{
+			Engine.Builder.card($('#pagecontent'),{ title: 'Issues', icon: 'issues'}, function(card){
+				Engine.request('issues','read',{
 					data:{options:{ link_to:'IssuesIndex',plugin:'issues',view:'index' }},
 				},function(result) {
 					var dataset = JSON.parse(result);
 					if(dataset.success != undefined){
-						for(const [key, value] of Object.entries(dataset.output.dom)){ API.Helper.set(API.Contents,['data','dom','issues',value.name],value); }
-						for(const [key, value] of Object.entries(dataset.output.raw)){ API.Helper.set(API.Contents,['data','raw','issues',value.name],value); }
-						API.Builder.table(card.children('.card-body'), dataset.output.dom, {
+						for(const [key, value] of Object.entries(dataset.output.dom)){ Engine.Helper.set(Engine.Contents,['data','dom','issues',value.name],value); }
+						for(const [key, value] of Object.entries(dataset.output.raw)){ Engine.Helper.set(Engine.Contents,['data','raw','issues',value.name],value); }
+						Engine.Builder.table(card.children('.card-body'), dataset.output.dom, {
 							headers:dataset.output.headers,
 							id:'IssuesIndex',
 							modal:true,
@@ -26,7 +26,7 @@ API.Plugins.issues = {
 							controls:{ toolbar:true},
 							import:{ key:'id', },
 						},function(response){
-							API.Plugins.issues.element.table.index = response.table;
+							Engine.Plugins.issues.element.table.index = response.table;
 						});
 					}
 				});
@@ -40,10 +40,10 @@ API.Plugins.issues = {
 					values += $(this).html();
 				});
 				if(values == ''){
-					API.request('issues','read',{data:{id:id,key:'name'}},function(result){
+					Engine.request('issues','read',{data:{id:id,key:'name'}},function(result){
 						var dataset = JSON.parse(result);
 						if(dataset.success != undefined){
-							API.GUI.insert(dataset.output.dom);
+							Engine.GUI.insert(dataset.output.dom);
 						}
 					});
 				}
@@ -53,4 +53,4 @@ API.Plugins.issues = {
 	extend:{},
 }
 
-API.Plugins.issues.init();
+Engine.Plugins.issues.init();
